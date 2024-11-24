@@ -7,10 +7,49 @@
     <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-    <h1>OFC Poker</h1>
-    <button id="start">Начать</button>
-    <div id="hand"></div>
-    <button id="next">Ок</button>
+    <header>
+        <h1>Открытый Китайский Покер (OFC Poker)</h1>
+    </header>
+
+    <main>
+        <!-- Кнопки управления -->
+        <div id="controls">
+            <button id="start">Начать</button>
+            <button id="next">Ок</button>
+            <button id="save-github">Сохранить прогресс в GitHub</button>
+        </div>
+
+        <!-- Игровые таблицы -->
+        <section id="tables">
+            <!-- Таблица ИИ -->
+            <div id="ai-table" class="table">
+                <h2>Таблица ИИ</h2>
+                <div class="row" id="ai-top"></div>
+                <div class="row" id="ai-middle"></div>
+                <div class="row" id="ai-bottom"></div>
+            </div>
+
+            <!-- Таблица игрока -->
+            <div id="player-table" class="table">
+                <h2>Моя таблица</h2>
+                <div class="row" id="player-top"></div>
+                <div class="row" id="player-middle"></div>
+                <div class="row" id="player-bottom"></div>
+            </div>
+        </section>
+
+        <!-- Текущая рука игрока -->
+        <section id="hand-section">
+            <h2>Моя рука</h2>
+            <div id="hand"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 OFC Poker. Все права защищены.</p>
+    </footer>
+
+    <!-- Подключение JavaScript -->
     <script src="/static/script.js"></script>
 </body>
 </html>
