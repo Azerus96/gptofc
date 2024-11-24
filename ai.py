@@ -8,6 +8,7 @@ from random import choices
 
 class MCCFR_AI:
     def __init__(self):
+        # Таблицы сожалений, стратегий и суммы стратегий
         self.regret_table = defaultdict(lambda: defaultdict(float))  # Таблица сожалений
         self.strategy_table = defaultdict(lambda: defaultdict(float))  # Таблица стратегий
         self.strategy_sum = defaultdict(lambda: defaultdict(float))  # Сумма стратегий
@@ -87,11 +88,11 @@ class MCCFR_AI:
                 self.strategy_table = defaultdict(lambda: defaultdict(float), data["strategy_table"])
                 self.strategy_sum = defaultdict(lambda: defaultdict(float), data["strategy_sum"])
 
-    def save_to_github(self, repo, path, commit_message="Update AI progress"):
+    def save_to_github(self, repo="Azerus96/gptofc", path="progress/ai_progress.json", commit_message="Update AI progress"):
         """
         Сохраняет прогресс MCCFR в репозиторий GitHub.
-        
-        :param repo: Название репозитория в формате "owner/repo".
+
+        :param repo: Название репозитория в формате "username/repo".
         :param path: Путь к файлу в репозитории.
         :param commit_message: Сообщение коммита.
         """
